@@ -5,4 +5,4 @@ interface UserLogin {
     token?: string| null 
 }
 
-export default UserLogin
+export default UserLogin;
