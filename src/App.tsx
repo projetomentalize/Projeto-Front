@@ -4,27 +4,24 @@ import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Navbar from './components/estaticos/navbar/Navbar';
 import Footer from './components/estaticos/footer/Footer';
 import Home from './paginas/home/Home';
-import Login  from './paginas/login/Login';
-import Contato from './paginas/contato/Contato';
+import Login from './paginas/login/Login';
 import CadastroUsuario from './paginas/cadastroUsuario/CadastroUsuario';
-import SobreNos from './paginas/sobreNos/SobreNos';
-
+import ListaTema from './components/temas/listatema/ListaTema';
+import ListaPostagem from './components/postagens/listapostagem/ListaPostagem';
 
 function App() {
   return (
     <Router>
       <Navbar />
-      <div style={{ minHeight: '100vh' }}>
         <Routes>
-          <Route path="/" element={<Login />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/cadastrousuario" element={<CadastroUsuario />} />
-          <Route path='/contato' element={<Contato />} />
-          <Route path='/sobrenos' element={<SobreNos />} />
-        </Routes>
+          <Route path='/' element={<Login />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/home' element={<Home />} />
+          <Route path='/cadastrousuario' element={<CadastroUsuario />} />
+          <Route path='/temas' element={<ListaTema />} />
+          <Route path='/postagem' element={<ListaPostagem/>} />
+       </Routes>
       <Footer />
-     </div> 
     </Router>
   );
 }
