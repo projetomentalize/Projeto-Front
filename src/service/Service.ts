@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 export const api = axios.create({
-    baseURL: 'https://mentalize.onrender.com/'
+    baseURL: 'https://mentalize.onrender.com'
 })
 
 export const cadastrarUsuario = async(url:any, dados:any, setDado:any) => {

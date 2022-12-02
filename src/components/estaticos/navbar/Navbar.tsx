@@ -37,11 +37,7 @@ function Navbar(){
                             </Typography>
                             </Link>
                         </Box>
-                        <Box mx={1} className='cursor'>
-                            <Typography variant="h6" color="inherit">
-                                logout
-                            </Typography>
-                        </Box>
+                        
                     </Box>
                 </Toolbar>
             </AppBar>
