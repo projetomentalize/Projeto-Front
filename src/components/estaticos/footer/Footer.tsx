@@ -6,49 +6,38 @@ import FacebookIcon from '@material-ui/icons/Facebook';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import './Footer.css'
 
-function Footer(){
+function Footer() {
 
-    return(
+    return (
 
-       <>
+        <>
 
-            <Grid container direction="row" justifyContent="center" alignItems="center">
+            <Grid container direction="row" justifyContent="center" alignItems="center" className='rodape'>
                 <Grid alignItems="center" item xs={12}>
                     <Box className='box1'>
-                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="">
-                            <Typography variant="h5" align="center" gutterBottom className='textos'>Mentalize</Typography>
-                            <Box display="flex" alignItems="" justifyContent="end">
-                            <a href="" target="_blank">
-                                <FacebookIcon className='redes' />
-                            </a>
-                            <a href="" target="_blank">
-                                <InstagramIcon className='redes' />
-                            </a>
-                            <a href="" target="_blank">
-                                <LinkedInIcon className='redes' />
-                            </a>
-                            </Box>
+                        <Box paddingTop={1} display="flex" alignItems="center" justifyContent="center">
+                            <Typography variant="h6" align="center" gutterBottom className='textos'></Typography>
                         </Box>
-                        {/* <Box display="flex" alignItems="" justifyContent="end">
-                            <a href="" target="_blank">
-                                <FacebookIcon className='redes' />
-                            </a>
-                            <a href="" target="_blank">
-                                <InstagramIcon className='redes' />
-                            </a>
-                            <a href="" target="_blank">
-                                <LinkedInIcon className='redes' />
-                            </a>
-                            </Box> */}
+                            <Box display="flex" alignItems="" justifyContent="center">
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <FacebookIcon className='redes' />
+                                </a>
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <InstagramIcon className='redes' />
+                                </a>
+                                <a href="" target="_blank" rel="noopener noreferrer">
+                                    <LinkedInIcon className='redes' />
+                                </a>
+                            </Box>
                     </Box>
                     <Box className='box2'>
-                        <Box paddingTop={2}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos' >©2022 Copyright:mentalize.com.br</Typography>
+                        <Box paddingTop={1}>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='textos'> Copyright © 2022 Projeto Mentalize - Todos os direitos reservados.</Typography>
                         </Box>
                     </Box>
                 </Grid>
             </Grid>
-       </> 
+        </>
     );
 }
 

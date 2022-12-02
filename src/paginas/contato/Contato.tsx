@@ -21,7 +21,7 @@ function CadastroUsuario() {
                                 </Button>
                             </Link>
                             <Button type='submit' variant='contained' color='primary'>
-                                Cadastrar
+                                Enviar
                             </Button>  
                         </Box>
                     </form>

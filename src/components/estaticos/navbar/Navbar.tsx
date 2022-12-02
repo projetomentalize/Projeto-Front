@@ -13,7 +13,7 @@ function Navbar(){
                         {/* <Typography varr iant="h5" color="inherit">
                             Mentalize
                         </Typography> */}
-                        <img src="https://raw.githubusercontent.com/projetomentalize/midia/main/500x500logo.png" height={60} alt='logoMentalize'/>
+                        <img src="https://raw.githubusercontent.com/projetomentalize/midia/main/logolandscape.png" height={60} alt='logoMentalize'/>
                     </Box>
                     <Box display="flex" justifyContent="start">
                         <Box mx={1} className='cursor'>

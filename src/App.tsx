@@ -14,14 +14,17 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <div style={{ minHeight: '100vh' }}>
         <Routes>
-          {/* <Route path='/' element={<Login />} /> */}
-          <Route path='/' element={<Home />} />
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/home" element={<Home />} />
+          <Route path="/cadastrousuario" element={<CadastroUsuario />} />
           <Route path='/contato' element={<Contato />} />
           <Route path='/sobrenos' element={<SobreNos />} />
-          <Route path='/cadastrousuario' element={<CadastroUsuario />} />
         </Routes>
       <Footer />
+     </div> 
     </Router>
   );
 }

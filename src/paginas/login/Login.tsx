@@ -1,14 +1,13 @@
-import { Button, Grid, TextField, Typography } from '@material-ui/core';
+import React, { useState, useEffect, ChangeEvent } from 'react';
+import { Grid, Typography, TextField, Button } from '@material-ui/core';
 import { Box } from '@mui/material';
-import React, { ChangeEvent, useEffect, useState } from 'react';
-import { Link, useNavigate, } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
+import { login } from '../../service/Service';
 import UserLogin from '../../models/UserLogin';
-import { api } from '../../service/Service';
-import './Login.css'
+import './Login.css';
 
 function Login() {
-
     let navigate = useNavigate();
     const [token, setToken] = useLocalStorage('token');
     const [userLogin, setUserLogin] = useState<UserLogin>(
@@ -20,7 +19,7 @@ function Login() {
         }
     )
 
-    function updateModel(e: ChangeEvent<HTMLInputElement>) {
+    function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
         setUserLogin({
             ...userLogin,
@@ -36,45 +35,45 @@ function Login() {
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
-
         try {
-            const resposta = await api.post(`/usuarios/logar`, userLogin)
-            setToken(resposta.data.token)
+            await login(`/usuarios/logar`, userLogin, setToken)
 
-            alert('Usuário logado com sucesso')
-        } catch(error) {
-            alert('Dados do usuário inconsistentes, Erro ao logar!');
+            alert('Usuário logado com sucesso!');
+        } catch (error) {
+            alert('Dados do usuário inconsistentes. Erro ao logar!');
         }
     }
 
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
-            <Grid alignItems='center' xs={6}>
-                <Box padding={20}>
-                    <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center'>Entrar</Typography>
-                        <TextField id='usuario' value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
-                        <TextField id='senha' value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updateModel(e)} label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-                        <Box marginTop={2} textAlign='center'>
-                            <Button type='submit' variant='contained' color='primary'>
-                                Logar
-                            </Button>
+        <>
+        <Grid container className='grid1'>
+            <Grid container direction='row' justifyContent='center' alignItems='center'>
+                <Grid alignItems='center' xs={6}>
+                    <Box boxShadow={2} paddingX={20} className='caixalogin'>
+                        <form onSubmit={onSubmit}>
+                            <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos1'>Entrar</Typography>
+                            <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='usuário' variant='outlined' name='usuario' margin='normal' fullWidth />
+                            <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
+                            <Box marginTop={2} textAlign='center'>
+                                <Button type='submit' variant='contained' color='primary'>
+                                    Logar
+                                </Button>
+                            </Box>
+                        </form>
+                        <Box display='flex' justifyContent='center' marginTop={2}>
+                            <Box marginRight={1}>
+                                <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
+                            </Box>
+                            <Link to='/cadastrousuario'>
+                                <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
+                            </Link>
                         </Box>
-                    </form>
-                    <Box display='flex' justifyContent='center' marginTop={2}>
-                        <Box marginRight={1}>
-                            <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
-                        </Box>
-                        <Link to='/cadastrousuario'>
-                            <Typography variant='subtitle1' gutterBottom align='center' className='textos1'>Cadastre-se</Typography>
-                        </Link>
                     </Box>
-                </Box>
-            </Grid>
-            <Grid xs={6} className='imagem'>
+                </Grid>
             </Grid>
         </Grid>
+      </>  
     );
 }
 
-export default Login;
+export default Login

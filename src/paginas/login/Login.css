@@ -1,0 +1,28 @@
+.textos1{
+    font-weight: bold !important;
+ }
+ 
+ .imagem{
+     background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+     background-repeat: no-repeat;
+     width: 100vh;
+     min-height: 100vh;
+     background-size: cover;
+     background-position: center;
+ }
+ 
+ .text-decorator-none{
+     text-decoration: none;
+ }
+
+ .caixalogin{
+
+ }
+
+ .grid1{
+    min-height: 100vh; 
+    background: #f1f4f9;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-image: url(https://resumedone.co/static/img/login/Without-BG.svg);
+ }
