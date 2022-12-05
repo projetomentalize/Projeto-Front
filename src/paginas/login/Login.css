@@ -9,7 +9,6 @@
     margin-right: auto!important;
     margin-top: 0%!important;
     margin-bottom: 30%!important;
-    background-color: #0087c1;
 }
 
 .imagem {
@@ -30,7 +29,7 @@
     margin-right: auto;
     margin-top: 5%;
     margin-bottom: 5%;
-    width: 10%;
+    width: 20%;
     height: 40%;
     background-color: white;
     z-index: 1;
@@ -42,7 +41,6 @@
     background-clip: border-box;
     border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 0.25rem;
-    background-color: yellow;
 }
 
 .formlogin {
@@ -51,15 +49,12 @@
     margin-right: 0% !important;
     margin-top: 0% !important;
     margin-bottom: 0% !important;
-    background-color: blue;
-    min-height:80%!important;
-    width: 150%;
+ 
 }
 
 .teste {
     font-weight: bold !important;
         width:100%!important;
-        background-color: red;
 
 
 }

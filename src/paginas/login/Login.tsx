@@ -31,7 +31,7 @@ function Login() {
         if (token != '') {
             navigate('/home');
         }
-    }, [token, navigate]);
+    }, [token]);
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();

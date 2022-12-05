@@ -1,9 +1,20 @@
+.testecontato{
+    margin-top: 2%;
+    margin-bottom: 2%   ;
+}
+
 .arroz{
     flex-direction: column;
     text-align: center;
 }
 
-.testecontato{
-    margin-top: 2%;
-    margin-bottom: 2%   ;
+.boxcontato{
+    margin-top:10%!important;
+
+}
+
+.paper{
+    margin-top: 5%;
+    width: 300px !important;
+    height:300px!important;
 }
