@@ -19,20 +19,20 @@ function Footer() {
                             <Typography variant="h6" align="center" gutterBottom className='textos'></Typography>
                         </Box>
                             <Box display="flex" alignItems="" justifyContent="center">
-                                <a href="" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer">
                                     <FacebookIcon className='redes' />
                                 </a>
-                                <a href="" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer">
                                     <InstagramIcon className='redes' />
                                 </a>
-                                <a href="" target="_blank" rel="noopener noreferrer">
+                                <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
                                     <LinkedInIcon className='redes' />
                                 </a>
                             </Box>
-                    </Box>
+                        </Box>
                     <Box className='box2'>
                         <Box paddingTop={1}>
-                            <Typography variant="subtitle2" align="center" gutterBottom className='textos'> Copyright © 2022 Projeto Mentalize - Todos os direitos reservados.</Typography>
+                            <Typography variant="subtitle2" align="center" gutterBottom className='texto-footer'> Copyright © 2022 Projeto Mentalize - Todos os direitos reservados.</Typography>
                         </Box>
                     </Box>
                 </Grid>
