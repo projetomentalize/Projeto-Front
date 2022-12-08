@@ -9,7 +9,13 @@
 }
 
 .boxcontato{
-    margin-top:10%!important;
+        min-height: 100vh;
+        background: #f1f4f9 !;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        /* background-image: url(https://raw.githubusercontent.com/projetomentalize/midia/0b400e46831bc61cd159dd0c8e2a8bfd1ae3035d/videogradient.svg); */
+        z-index: 2;
+    
 
 }
 

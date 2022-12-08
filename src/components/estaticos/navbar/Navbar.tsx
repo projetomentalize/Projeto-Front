@@ -10,7 +10,7 @@ function Navbar(){
             <AppBar position="fixed">
                 <Toolbar  className='fundo' variant="dense">
                     <Box className='logo' >                   
-                        <img src="https://raw.githubusercontent.com/projetomentalize/midia/main/logolandscape.png" height={60} alt='logoMentalize'/>
+                        <img src="https://raw.githubusercontent.com/projetomentalize/midia/5b75364a92009a3098609fe8fa0b46298edb1dc1/logosf.svg"  alt='logoMentalize'/>
                     </Box>
                     <Box display="flex" justifyContent="start">
                         <Box mx={1} className='item'>
