@@ -1,9 +1,26 @@
+.testecontato{
+    margin-top: 2%;
+    margin-bottom: 2%   ;
+}
+
 .arroz{
     flex-direction: column;
     text-align: center;
 }
 
-.testecontato{
-    margin-top: 2%;
-    margin-bottom: 2%   ;
+.boxcontato{
+        min-height: 100vh;
+        background: #f1f4f9 !;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+        /* background-image: url(https://raw.githubusercontent.com/projetomentalize/midia/0b400e46831bc61cd159dd0c8e2a8bfd1ae3035d/videogradient.svg); */
+        z-index: 2;
+    
+
+}
+
+.paper{
+    margin-top: 5%;
+    width: 300px !important;
+    height:300px!important;
 }
