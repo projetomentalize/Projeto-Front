@@ -4,22 +4,34 @@ import { Card, CardActions, CardContent, Button, Typography } from '@material-ui
 import { Box } from '@mui/material';
 import Tema from '../../../models/Tema';
 import './ListaTema.css';
-import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom';
 import { busca } from '../../../service/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from 'react-toastify';
 
 function ListaTema() {
     const [temas, setTemas] = useState<Tema[]>([])
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
     let navigate = useNavigate();
 
     useEffect(() => {
         if (token == '') {
-            alert("Você precisa estar logado")
-            navigate("/login")
+            toast.error('Você precisa estar logado', {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+        theme: "colored",
+        progress: undefined,
+        });
+        navigate("/login")
         }
     }, [token])
-
 
     async function getTema() {
         await busca("/temas/all", setTemas, {
@@ -28,7 +40,6 @@ function ListaTema() {
             }
         })
     }
-
 
     useEffect(() => {
         getTema()
@@ -50,7 +61,6 @@ function ListaTema() {
                             </CardContent>
                             <CardActions>
                                 <Box display="flex" justifyContent="center" mb={1.5} >
-
                                     <Link to={`/formularioTema/${tema.id}`} className="text-decorator-none">
                                         <Box mx={1}>
                                             <Button variant="contained" className="marginLeft" size='small' color="primary" >
@@ -74,6 +84,5 @@ function ListaTema() {
         </>
     );
 }
-
 
 export default ListaTema;
