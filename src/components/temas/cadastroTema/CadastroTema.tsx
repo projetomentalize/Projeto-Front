@@ -57,15 +57,7 @@ function CadastroTema() {
                 [e.target.name]: e.target.value,
             })
         }
-        
-        async function findById(id: string){
-        buscaId(`/tema/${id}`, setTema,{
-            headers: {
-                'Authorization': token
-            }
-        })
-    }
-        
+              
         async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
             e.preventDefault()
             console.log("tema " + JSON.stringify(tema))
@@ -116,7 +108,7 @@ function CadastroTema() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
                 <TextField value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />
-                <TextField value={tema.abordagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="abordagem" label="abordagem" variant="outlined" name="abordagem" margin="normal" fullWidth />
+                <TextField value={tema.abordagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="abordagem" label="Abordagem" variant="outlined" name="abordagem" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>
