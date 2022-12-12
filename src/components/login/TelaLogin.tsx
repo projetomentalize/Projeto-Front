@@ -68,26 +68,25 @@ function TelaLogin() {
     }
 
     return (
-        <Container maxWidth="sm" className="topo">
             <Box  display='flex' className='caixaLogin'>
                 <Divider />
-                <Typography color='textPrimary' align='center' className='texto1'>Entrar</Typography>
+                <Typography color='textPrimary' align='center' className='texto1-login'>Entrar</Typography>
                 <Divider />
                 <Box display='flex' justifyContent='center' >
                     <Box marginRight={1}>
-                        <Typography variant='subtitle1' gutterBottom align='center' className='texto2'>Informe o seu e-mail e senha para acessar sua conta:</Typography>
+                        <Typography variant='subtitle1' gutterBottom align='center' className='texto2-login'>Informe o seu e-mail e senha para acessar sua conta:</Typography>
                     </Box>
                 </Box>
                 <form onSubmit={onSubmit} className='formlogin' >
                     <TextField value={userLogin.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='usuario' label='Endereço de e-mail' variant='outlined' name='usuario' margin='normal' fullWidth className='campos' />
                     <TextField value={userLogin.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='senha' label='Senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth className='campos' />
-                    <Box marginTop={5} textAlign='center'>
+                    <Box marginTop={2} textAlign='center'>
                         <Button type='submit' variant='contained' className='btnLogin'>
                             Login
                         </Button>
                     </Box>
                 </form>
-                <Box display='flex' justifyContent='center' marginTop={1}>
+                <Box display='flex' justifyContent='center' marginRight={1} className='txt-cadastro'>
                     <Box marginRight={1}>
                         <Typography variant='subtitle1' gutterBottom align='center'>Não tem uma conta?</Typography>
                     </Box>
@@ -96,7 +95,6 @@ function TelaLogin() {
                     </Link>
                 </Box>
             </Box>
-        </Container>
 
     );
 }

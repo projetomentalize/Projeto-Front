@@ -3,17 +3,19 @@
 
 }
 
-.texto1 {
+.texto1-login {
     font-weight: bold !important;
     margin-left: auto!important;
     margin-right: auto!important;
     margin-top: 1%!important;
     margin-bottom: 1%!important;
     font-size: 1.5em!important;
+
+    
     
     
 }
-.texto2 {
+.texto2-login {
     margin-left: auto!important;
     margin-right: auto!important;
     margin-top: 5%!important;
@@ -38,6 +40,7 @@
     border-radius: 0.25rem;
     min-width: 90%!important;
     min-height: 90%!important;
+
     
 }
 
@@ -72,6 +75,11 @@
     color: white !important;
     transition: all 0.2s !important;
     text-transform: uppercase !important;
+
+}
+
+.txt-cadastro{
+    margin-top: 5%!important;
 
 }
 
