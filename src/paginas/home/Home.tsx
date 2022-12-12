@@ -7,8 +7,7 @@ import { TokenState } from '../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import Navbar from '../../components/estaticos/navbar/Navbar';
-import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
-
+import ModalPostagem from '../../components/postagens/ModalPostagem/ModalPostagem';
 function Home() {
 
     let navigate = useNavigate();
