@@ -17,7 +17,7 @@ function Navbar(): JSX.Element {
     let navigate = useNavigate();
     const dispatch = useDispatch();
 
-    function goLogout() {
+    function goLogout() { 
         dispatch(addToken(''));
         toast.info('Usuário deslogado', {
             position: "top-right",
@@ -36,13 +36,10 @@ function Navbar(): JSX.Element {
 
     if (token != "") {
         navbarComponent = <AppBar position="static">
-            <Toolbar variant="dense">
-                <Box className='cursor'>
-                    <Typography variant="h5" color="inherit">
-                        Mentalize
-                    </Typography>
-                </Box>
-
+            <Toolbar className='fundo' variant="dense">
+                    <Box className='logo' >
+                        <img src="https://raw.githubusercontent.com/projetomentalize/midia/5b75364a92009a3098609fe8fa0b46298edb1dc1/logosf.svg" alt='logoMentalize' />
+                    </Box>
                 <Box display="flex" justifyContent="start">
                     <Link to="/home" className="text-decorator-none">
                         <Box mx={1} className='cursor'>

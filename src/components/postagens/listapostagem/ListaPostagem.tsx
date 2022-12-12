@@ -5,7 +5,6 @@ import { busca } from '../../../service/Service';
 import {Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import {Box} from '@mui/material';
 import './ListaPostagem.css';
-import useLocalStorage from 'react-use-localstorage';
 import { useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
@@ -68,6 +67,12 @@ function ListaPostagem() {
                 <Typography variant="body2" component="p">
                   {post.tema?.nome}
                 </Typography>
+                {/* <Typography variant="body2" component="p"> 
+                  {post.usuario?.nome} // Exibe o nome do usuario da postagem.
+                </Typography>
+                <Typography variant="body2" component="p">
+                  {post.data}  // Exibe a data da postagem.
+                </Typography> */}
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>

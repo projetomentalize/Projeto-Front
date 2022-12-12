@@ -3,20 +3,6 @@
 
 }
 
-.grid1 {
-    min-height: 100vh;
-    background: #f1f4f9 ;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-image: url(https://resumedone.co/static/img/login/Without-BG.svg);
-    z-index: 2;
-    /* background-size: cover; */
-
-    
-
-}
-
-
 .texto1 {
     font-weight: bold !important;
     margin-left: auto!important;
@@ -30,8 +16,8 @@
 .texto2 {
     margin-left: auto!important;
     margin-right: auto!important;
-    margin-top: 10%!important;
-    margin-bottom: 10%!important;
+    margin-top: 5%!important;
+    margin-bottom: 5%!important;
     color: grey;
     
 }
@@ -39,23 +25,19 @@
     text-decoration: none;
 }
 
-.caixalogin {
+.caixaLogin {
     margin-left: auto;
     margin-right: auto;
-    margin-top: 5%;
-    margin-bottom: 5%;
-    width: 25%;
-    height: 65%;
     background-color: white;
     z-index: 1;
     position: relative;
     display: flex;
     flex-direction: column;
-    min-width: 0;
     background-color: #fff;
     background-clip: border-box;
-    border: 1px solid rgba(0, 0, 0, .125);
     border-radius: 0.25rem;
+    min-width: 90%!important;
+    min-height: 90%!important;
     
 }
 
