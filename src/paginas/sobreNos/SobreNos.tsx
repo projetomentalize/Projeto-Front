@@ -1,4 +1,4 @@
-import { Grid, Box, Typography, Container } from "@material-ui/core";
+import { Grid, Box, Typography } from "@material-ui/core";
 import React from "react";
 import NavbarTeste from "../../components/estaticos/navbarteste/NavbarTeste";
 import './SobreNos.css'
