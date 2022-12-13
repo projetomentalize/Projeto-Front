@@ -17,7 +17,6 @@ function CadastroTema() {
     const [tema, setTema] = useState<Tema>({
         id: 0,
         nome:'',
-        abordagem:''
     })
 
     useEffect(() => {
@@ -108,7 +107,6 @@ function CadastroTema() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
                 <TextField value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />
-                <TextField value={tema.abordagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="abordagem" label="Abordagem" variant="outlined" name="abordagem" margin="normal" fullWidth />
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>

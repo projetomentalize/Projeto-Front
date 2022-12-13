@@ -38,7 +38,6 @@ function CadastroPost() {
         {
             id: 0,
             nome: '',
-            abordagem:''
         })
     const [postagem, setPostagem] = useState<Postagem>({
         id: 0,
