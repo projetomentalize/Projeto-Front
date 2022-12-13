@@ -8,28 +8,14 @@ function Home2() {
     return (
         <>
             <NavbarTeste />
-            <Grid container className='container-0'>
-                <Grid container direction='row' justifyContent='center' alignContent='center'>
-                    <Box className='txtdark'>
-                        <Box>
-                            <Typography variant="h6" align='center'> Missão</Typography>
-                            <Typography variant="h6" align='center' gutterBottom > Conectar pessoas que precisam de apoio psicológico com profissionais da área dispostos a ajudar essas pessoas de forma gratuita. Nós promovemos saúde e bem estar para população brasileira.</Typography>
-                        </Box>
-                        <Box>
-                            <Typography variant="h6" align='center'> Missão</Typography>
-                            <Typography variant="h6" align='center' gutterBottom > Conectar pessoas que precisam de apoio psicológico com profissionais da área dispostos a ajudar essas pessoas de forma gratuita. Nós promovemos saúde e bem estar para população brasileira.</Typography>
-                        </Box>
-                    </Box>
-                </Grid>
-            </Grid>
-            <Divider/>
             <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato">
                 <Box text-align='center'>
-                     <Typography variant='h5' color='textPrimary' component='h5' align='center' className="titulo-contato">CONTATE-NOS</Typography>
-                </Box>
-                <Box >                    
-                </Box>
-            </Grid>
+                <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/3.svg' alt="" ></img>
+                </Box>                
+            <Divider/>
+                <Box text-align='center'>
+                <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/3.svg' alt="" ></img>
+                </Box>               
             <Divider/>
             <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato1">
                 <Box text-align='center'>
@@ -51,6 +37,7 @@ function Home2() {
                         </Box> 
                     </form>
                 </Box>
+            </Grid>
             </Grid>
         </>
     );
