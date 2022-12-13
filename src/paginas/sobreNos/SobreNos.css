@@ -1,12 +1,18 @@
-.caixa1{
-    margin-top:10%!important;
+.caixa1-about{
+    min-height: 100vh;
+    background: #f1f4f9 ;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    background-image: url(https://resumedone.co/static/img/login/Without-BG.svg);
+    z-index: 2;
     
 }
 
-.MM{
-    justify-content: center;
-    align-items: center;
-}
+
 .txtdark{
     color: black;
+    margin-top: 1%px!important;
+
+    
 }
+

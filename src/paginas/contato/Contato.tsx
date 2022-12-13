@@ -1,32 +1,37 @@
-import { Button, Grid, TextField, Typography } from "@material-ui/core";
+import { Button, Grid, MenuItem, TextareaAutosize, TextField, Typography } from "@material-ui/core";
 import { Box } from "@mui/material";
 import React from "react";
 import { Link } from "react-router-dom";
+import NavbarTeste from "../../components/estaticos/navbarteste/NavbarTeste";
 import './Contato.css'
 
 
 function Contato() {
     return (
-        <Grid container direction='row' justifyContent='center' alignContent='center' className='boxcontato'>
-            <Box paddingX={10}>
-                <form>
-                    <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center'>Entre em contato Conosco</Typography>
-                    <TextField id='nome' label='Nome' variant='outlined' name='nome' margin='normal' fullWidth />
-                    <TextField id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' fullWidth />
-                    <TextField id='assunto' label='Mensagem' variant='outlined' name='assunto' type='normal' margin='normal' fullWidth />
-                    <Box marginTop={2} textAlign='center'>
-                        <Link to='/login' className='text-decorator-none'>
-                            <Button variant='contained' color='secondary' className='btnCancelar'>
-                                Cancelar
+        <>
+        <NavbarTeste/>
+        <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato">
+                <Box text-align='center'>
+                     <Typography variant='h5' color='textPrimary' component='h5' align='center' className="titulo-contato">CONTATE-NOS</Typography>
+                </Box>
+                <Box paddingX={1}  boxShadow={2} className='box-contato'>                    
+                    <form  className='form-contato'>
+                        <TextField id='nome' label='Nome' variant='outlined' name='nome' margin='normal' className="campos" size='small' fullWidth />
+                        <TextField id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' className="campos" size='small' fullWidth />
+                        <TextareaAutosize id='mensagem' aria-label='Mensagem' aria-variant='outlined' name='mensagem' aria-margin='normal' defaultValue='Deixe aqui sua mensagem. Será um prazer atendê-lo.;)' className='txt-area'/>
+                        <TextField id="select" label='Categoria' variant='outlined' name='categoria' margin='normal' className="campos" size='small' fullWidth select>
+                            <MenuItem value="duvidas">Dúvidas</MenuItem>
+                            <MenuItem value="sugestoes">Sugestões</MenuItem>
+                        </TextField>
+                        <Box marginTop={2} textAlign='center'>
+                            <Button type='submit' variant='contained' color='primary' className='btnCadastrar'>
+                                Enviar
                             </Button>
-                        </Link>
-                            <Button type='submit' variant='contained' color='primary'>
-                            Enviar
-                            </Button>
-                    </Box>
-                </form>
-            </Box>
-        </Grid>
+                        </Box> 
+                    </form>
+                </Box>
+            </Grid>
+        </>
     )
 }
 

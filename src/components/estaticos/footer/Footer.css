@@ -2,6 +2,8 @@
     width:100%; 
     position:static; 
     bottom:0px;
+    
+    
 }
 .box1{
     background-color: #61d2ff;
@@ -11,8 +13,10 @@
 }
 
 .box2{
-    background-color: #38b6ff;
+    /* background-color: #38b6ff; */
     height: 30px;
+    background: rgb(56,182,255);
+    background: linear-gradient(180deg, rgba(56,182,255,1) 0%, rgba(0,135,193,1) 0%, rgba(0,212,255,1) 100%);
 
 
 }
