@@ -50,6 +50,10 @@ function App() {
 
             <Route path="/formularioTema/:id" element={<CadastroTema />} />
 
+            <Route path="/formularioTema/:id" element={<CadastroTema />} />
+
+            <Route path="/formularioTema/:id" element={<CadastroTema />} />
+
             <Route path="/deletarPostagem/:id" element={<DeletarPostagem />} />
 
             <Route path="contato" element={<Contato />} />
