@@ -8,7 +8,7 @@ function Home2() {
     return (
         <>
             <NavbarTeste />
-            <Grid container className='caixa1-about'>
+            <Grid container className='container-0'>
                 <Grid container direction='row' justifyContent='center' alignContent='center'>
                     <Box className='txtdark'>
                         <Box>

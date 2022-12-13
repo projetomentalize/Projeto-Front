@@ -1,10 +1,5 @@
-.caixa1-about{
+.container-0{
     min-height: 100vh;
-    background: #f1f4f9 ;
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    background-image: url(https://resumedone.co/static/img/login/Without-BG.svg);
-    z-index: 2;
     
 }
 
