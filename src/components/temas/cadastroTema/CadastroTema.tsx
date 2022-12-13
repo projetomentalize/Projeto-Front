@@ -9,11 +9,15 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
 function CadastroTema() {
+    
     let navigate = useNavigate();
+
     const { id } = useParams<{id: string}>();
+
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
       );
+
     const [tema, setTema] = useState<Tema>({
         id: 0,
         nome:'',

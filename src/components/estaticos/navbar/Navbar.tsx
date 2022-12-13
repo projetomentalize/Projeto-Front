@@ -11,12 +11,14 @@ import { addToken } from '../../../store/tokens/actions';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function Navbar(): JSX.Element {
+    const dispatch = useDispatch();
+
+    let navigate = useNavigate();
+
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-    let navigate = useNavigate();
-    const dispatch = useDispatch();
-
+    
     function goLogout() { 
         dispatch(addToken(''));
         toast.info('Usuário deslogado', {

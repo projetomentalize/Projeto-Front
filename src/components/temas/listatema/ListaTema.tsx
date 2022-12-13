@@ -12,13 +12,15 @@ import { toast } from 'react-toastify';
 
 function ListaTema() {
     const [temas, setTemas] = useState<Tema[]>([])
+
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
+
     let navigate = useNavigate();
 
     useEffect(() => {
-        if (token == '') {
+        if (token == "") {
             toast.error('Você precisa estar logado', {
                 position: "top-right",
                 autoClose: 2000,

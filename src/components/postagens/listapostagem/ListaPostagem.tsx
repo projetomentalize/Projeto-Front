@@ -11,11 +11,15 @@ import { toast } from 'react-toastify';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaPostagem() {
+  
   const [posts, setPosts] = useState<Postagem[]>([])
+
   let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+
+  const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+ 
 
   useEffect(() => {
     if (token == "") {
