@@ -1,16 +1,33 @@
-import { Button, Grid, MenuItem, TextareaAutosize, TextField, Typography } from "@material-ui/core";
-import { Box } from "@mui/material";
-import React from "react";
-import { Link } from "react-router-dom";
+import { Grid, Box, Typography, Button, MenuItem, TextField, TextareaAutosize } from "@material-ui/core";
+import Divider from "@material-ui/core/Divider";
+import React, { } from "react";
 import NavbarTeste from "../../components/estaticos/navbarteste/NavbarTeste";
-import './Contato.css'
+import './Home2.css'
 
-
-function Contato() {
+function Home2() {
     return (
         <>
-        <NavbarTeste/>
-        <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato">
+            <NavbarTeste />
+            <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato">
+                
+                <Box text-align='center'>
+                <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/1.svg' alt="" ></img>
+                </Box>                
+            <Divider/>
+                <Box text-align='center'>
+                <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/2.svg' alt="" ></img>
+                </Box>               
+            <Divider/>
+                <Box text-align='center'>
+                <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/3.svg' alt="" ></img>
+                </Box>                
+            <Divider/>
+                <Box text-align='center'>
+                <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/4.svg' alt="" ></img>
+                </Box>               
+            <Divider/>
+            
+            <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato1">
                 <Box text-align='center'>
                      <Typography variant='h5' color='textPrimary' component='h5' align='center' className="titulo-contato">CONTATE-NOS</Typography>
                 </Box>
@@ -31,8 +48,8 @@ function Contato() {
                     </form>
                 </Box>
             </Grid>
+            </Grid>
         </>
-    )
+    );
 }
-
-export default Contato;
+export default Home2;

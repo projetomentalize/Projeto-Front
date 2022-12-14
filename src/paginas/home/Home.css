@@ -18,7 +18,8 @@
 }
 
 .postagens{
-    background-color: white;
+    background: rgb(56, 182, 255);
+    background: linear-gradient(180deg, rgba(56, 182, 255, 1) 0%, rgba(0, 135, 193, 1) 0%, rgba(0, 212, 255, 1) 100%);
 }
 
 .caixa2{

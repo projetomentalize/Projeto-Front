@@ -1,72 +1,49 @@
-import React from 'react';
 import { AppBar, Toolbar, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
+import React from 'react';
 import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'
-import useLocalStorage from 'react-use-localstorage';
-
+import ModalLogin from '../../login/modalLogin/ModalLogin';
 import './NavbarTeste.css'
-function NavbarTeste() {
-    const [token, setToken] = useLocalStorage('token');
-    let navigate = useNavigate();
 
-    function goLogout() {
-        setToken('')
-        alert("Usuário deslogado")
-        navigate('/login')
-    }
+function NavbarTeste() {
     return (
         <>
-            <AppBar position="static">
-                <Toolbar variant="dense">
-                    <Box className='cursor'>
-                        <Typography variant="h5" color="inherit">
-                            BlogPessoal
-                        </Typography>
+            <AppBar position="fixed" className='navbar'>
+                <Toolbar className='fundo' variant="dense" >
+                    <Box className='logo' >
+                        <img src="https://raw.githubusercontent.com/projetomentalize/midia/5b75364a92009a3098609fe8fa0b46298edb1dc1/logosf.svg" alt='logoMentalize' />
                     </Box>
-
-                    <Box display="flex" justifyContent="start">
-                        <Link to="/home" className="text-decorator-none">
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="inherit">
-                                    Home
+                    <Box display="flex" justifyContent="end">
+                        <Box mx={1} className='item'>
+                            <Link to='/'>
+                                <Typography className='texto' variant="h6" color="inherit">
+                                    Pagina Inicial
                                 </Typography>
-                            </Box>
-                        </Link>
-                        <Link to="/postagens" className="text-decorator-none">
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="inherit">
-                                    Postagens
+                            </Link>
+                        </Box>
+                        <Box mx={1} className='item'>
+                            <Link to='/sobrenos'>
+                                <Typography className='texto' variant="h6" color="inherit">
+                                    Sobre Nós
                                 </Typography>
-                            </Box>
-                        </Link>
-                        <Link to="/temas" className="text-decorator-none">
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="inherit">
-                                    Temas
+                            </Link>
+                        </Box>
+                        <Box mx={1} className='item'>
+                            <Link to='/contato'>
+                                <Typography className='texto' variant="h6" color="inherit">
+                                    Contato
                                 </Typography>
-                            </Box>
-                        </Link>
-                        <Link to="/formularioTema" className="text-decorator-none">
-                            <Box mx={1} className='cursor'>
-                                <Typography variant="h6" color="inherit">
-                                    Cadastrar Tema
-                                </Typography>
-                            </Box>
-                        </Link>
-
-                        <Box mx={1} className='cursor' onClick={goLogout}>
-                            <Typography variant="h6" color="inherit">
-                                Logout
-                            </Typography>
+                            </Link>
+                        </Box>
+                        <Box mx={1} className='item'>
+                                <ModalLogin />
                         </Box>
 
                     </Box>
-
                 </Toolbar>
             </AppBar>
         </>
-    )
+    );
 }
 
 export default NavbarTeste;
