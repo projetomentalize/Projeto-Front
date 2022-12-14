@@ -28,9 +28,9 @@ function App() {
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
-            <Route path="/home2" element={<Home2 />}/>
+            <Route path="/" element={<Home2 />}/>
 
-            <Route path="/" element={<Login />} />
+            <Route path="/home2" element={<Home2 />} />
 
             <Route path="/login" element={<Login />} />
 
