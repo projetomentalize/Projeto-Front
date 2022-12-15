@@ -30,11 +30,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home2 />}/>
 
-<<<<<<< HEAD
-            <Route path="/" element={<Home2 />} />
-=======
             <Route path="/home2" element={<Home2 />} />
->>>>>>> 037667378e0683c598e7357008762f91142a7054
 
             <Route path="/login" element={<Login />} />
 
