@@ -22,10 +22,6 @@ function CadastroPost() {
         (state) => state.tokens
       )
 
-    const userId = useSelector<TokenState, TokenState['id']>(
-        (state) => state.id
-      )
-
     useEffect(() => {
         if (token == '') {
             toast.error('Você precisa estar logado', {
@@ -54,11 +50,16 @@ function CadastroPost() {
         titulo: '',
         midia_url:'',
         texto: '',
+        // data:'',
         tema: null,
         usuario: null
     })
 
-    const [usuario, setUsuario] = useState<User>({
+    const userId = useSelector<TokenState, TokenState['id']>(
+		(state) => state.id
+	)
+
+    const [usuario,setUser] = useState<User>({
         id: +userId,
         nome:'',
         usuario: '',
@@ -66,25 +67,6 @@ function CadastroPost() {
         foto_url: '',
         tipo_usuario:''
       })
-      
-    function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
-
-        setPostagem({
-            ...postagem,
-            [e.target.name]: e.target.value,
-            tema: tema,
-            
-        })
-
-    }
-
-    async function getTemas() {
-        await busca("/temas", setTemas, {
-            headers: {
-                'Authorization': token
-            }
-        })
-    }
 
     useEffect(() => { 
         setPostagem({
@@ -94,14 +76,6 @@ function CadastroPost() {
         })
     }, [tema])
 
-    async function findByIdPostagem(id: string) {
-        await buscaId(`postagens/${id}`, setPostagem, {
-            headers: {
-                'Authorization': token
-            }
-        })
-    } 
-
     useEffect(() => {
         getTemas()
         if (id !== undefined) {
@@ -109,12 +83,39 @@ function CadastroPost() {
         }
     }, [id])
 
+    async function getTemas() {
+        await busca("/temas", setTemas, {
+            headers: {
+                'Authorization': token
+            }
+        })
+    }
+
+    async function findByIdPostagem(id: string) {
+        await buscaId(`postagens/${id}`, setPostagem, {
+            headers: {
+                'Authorization': token
+            }
+        })
+    } 
+      
+    function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
+
+        setPostagem({
+            ...postagem,
+            [e.target.name]: e.target.value,
+            tema: tema
+            
+        })
+
+    }  
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
 
         if (id !== undefined) {
             try {
-                await put('/postagens', postagem, setPostagem, {
+                await put(`/postagens`, postagem, setPostagem, {
                   headers: {
                     Authorization: token
                   }
@@ -134,7 +135,7 @@ function CadastroPost() {
               }
             } else {
                 try {
-                await post('/postagens', postagem, setPostagem, {
+                await post(`/postagens`, postagem, setPostagem, {
                   headers: {
                      Authorization: token
                }

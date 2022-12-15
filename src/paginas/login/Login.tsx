@@ -23,7 +23,7 @@ function Login() {
             id: 0,
             usuario: '',
             senha: '',
-            token: ''
+            token: token
         }
     )
 
@@ -40,7 +40,7 @@ function Login() {
         id: 0,
         usuario: '',
         senha: '',
-        token: '',
+        token: token,
     })
 
     useEffect(() => {
@@ -49,10 +49,7 @@ function Login() {
             navigate('/home');
 
         }
-    }, [token]);
-
-
-  
+    }, [token]);  
 
     useEffect(() => {
         if (respUserLogin.token !== "") {
@@ -128,4 +125,4 @@ function Login() {
     );
 }
 
-export default Login
+export default Login;
