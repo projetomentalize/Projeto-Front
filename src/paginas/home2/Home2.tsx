@@ -79,7 +79,7 @@ function Home2() {
                 <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato">
 
                     <Box text-align='center'>
-                        <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/1.svg' alt="" ></img>
+                        <img src='https://raw.githubusercontent.com/projetomentalize/midia/749ca4a55d25c1d83e1e01293a6394983f2b3b0a/1.svg' alt="" ></img>
                     </Box>
                 <Divider />
                     <Box text-align='center'>
