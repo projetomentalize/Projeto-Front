@@ -6,6 +6,8 @@
 
 * {
     text-decoration: none;
+    font-family: 'Donau Uppercase', sans-serif!important;
+    text-transform: uppercase;
 }
 
 .fundo {

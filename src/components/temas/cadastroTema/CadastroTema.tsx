@@ -17,6 +17,7 @@ function CadastroTema() {
     const [tema, setTema] = useState<Tema>({
         id: 0,
         nome:'',
+        abordagem:'',
     })
 
     useEffect(() => {

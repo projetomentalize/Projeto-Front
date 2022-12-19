@@ -35,7 +35,7 @@ function Navbar(): JSX.Element {
     var navbarComponent;
 
     if (token != "") {
-        navbarComponent = <AppBar position="static">
+        navbarComponent = <AppBar position="static" >
             <Toolbar className='fundo' variant="dense">
                     <Box className='logo' >
                         <img src="https://raw.githubusercontent.com/projetomentalize/midia/5b75364a92009a3098609fe8fa0b46298edb1dc1/logosf.svg" alt='logoMentalize' />

@@ -38,16 +38,18 @@ function CadastroPost() {
         {
             id: 0,
             nome: '',
+            abordagem:''
         })
     const [postagem, setPostagem] = useState<Postagem>({
         id: 0,
+        // data: '',
         titulo: '',
         midia_url:'',
         texto: '',
-        // data: null,
-        tema: null,
+        tema: null
         // usuario: undefined
     })
+    
 
     useEffect(() => { 
         setPostagem({
@@ -93,10 +95,11 @@ function CadastroPost() {
         e.preventDefault()
 
         if (id !== undefined) {
-            put(`/postagens`, postagem, setPostagem, {
-                headers: {
-                    'Authorization': token
-                }
+            try {
+                await put(`/postagens`, postagem, setPostagem, {
+                  headers: {
+                    Authorization: token
+                  }
             })
             toast.success('Postagem atualizada com sucesso', {
                 position: "top-right",
@@ -107,12 +110,16 @@ function CadastroPost() {
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
-            });
-                } else {
-            post(`/postagens`, postagem, setPostagem, {
-                headers: {
-                    'Authorization': token
-                }
+            }); 
+              } catch (error) {
+                alert('Falha ao atualizar a postagem') //
+              }
+            } else {
+                try {
+                await post(`/postagens`, postagem, setPostagem, {
+                  headers: {
+                     Authorization: token
+               }
             })
             toast.success('Postagem cadastrada com sucesso', {
                 position: "top-right",
@@ -123,10 +130,15 @@ function CadastroPost() {
                 draggable: false,
                 theme: "colored",
                 progress: undefined,
-            });        }
+            });
+          }catch (error) {
+                alert('Falha ao cadastrar a postagem')
+              }
+       }
         back()
 
     }
+
 
     function back() {
         navigate('/postagens')

@@ -69,10 +69,10 @@ function ListaPostagem() {
                 </Typography>
                 {/* <Typography variant="body2" component="p"> 
                   {post.usuario?.nome} // Exibe o nome do usuario da postagem.
-                </Typography>
-                <Typography variant="body2" component="p">
-                  {post.data}  // Exibe a data da postagem.
-                </Typography> */}
+                </Typography>                 */}
+                {/* <Typography variant="body1" component="p">
+									Postado em: {new Date(Date.parse(post.data)).toLocaleDateString()} <br />
+								</Typography> */}
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>

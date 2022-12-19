@@ -1,7 +1,9 @@
 import axios from 'axios'
 
 export const api = axios.create({
-    baseURL: 'https://mentalize.onrender.com'
+    baseURL: 'https://mentalizeprojeto.herokuapp.com/'
+    // baseURL: 'https://mentalize.onrender.com/'
+
 })
 
 
