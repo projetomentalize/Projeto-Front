@@ -18,11 +18,11 @@ function Contato() {
                     <form  className='form-contato'>
                         <TextField id='nome' label='Nome' variant='outlined' name='nome' margin='normal' className="campos" size='small' fullWidth />
                         <TextField id='usuario' label='E-mail' variant='outlined' name='usuario' margin='normal' className="campos" size='small' fullWidth />
-                        <TextareaAutosize id='mensagem' aria-label='Mensagem' aria-variant='outlined' name='mensagem' aria-margin='normal' defaultValue='Deixe aqui sua mensagem. Será um prazer atendê-lo.;)' className='txt-area'/>
                         <TextField id="select" label='Categoria' variant='outlined' name='categoria' margin='normal' className="campos" size='small' fullWidth select>
                             <MenuItem value="duvidas">Dúvidas</MenuItem>
                             <MenuItem value="sugestoes">Sugestões</MenuItem>
                         </TextField>
+                        <TextareaAutosize id='mensagem' aria-label='Mensagem' aria-variant='outlined' name='mensagem' aria-margin='normal' className='txt-area' rows="8"/>
                         <Box marginTop={2} textAlign='center'>
                             <Button type='submit' variant='contained' color='primary' className='btnCadastrar'>
                                 Enviar
