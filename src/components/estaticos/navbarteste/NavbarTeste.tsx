@@ -22,7 +22,7 @@ function NavbarTeste() {
                             </Link>
                         </Box>
                         <Box mx={1} className='item'>
-                            <Link to='/sobrenos'>
+                            <Link to='/home2'>
                                 <Typography className='texto' variant="h6" color="inherit">
                                     Sobre Nós
                                 </Typography>
