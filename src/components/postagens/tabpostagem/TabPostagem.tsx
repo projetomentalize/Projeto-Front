@@ -26,8 +26,12 @@ function TabPostagem() {
           </Box>
         </TabPanel>
         <TabPanel value="2">
-          <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className="titulo">Sobre-nós</Typography>
-          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos ut eveniet natus totam et, voluptate dicta tempore alias, odio nobis non eius cupiditate minima inventore pariatur! Ipsum itaque consectetur voluptatibus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo velit consequuntur suscipit fugiat, nam quis quod quaerat veritatis et, vel ratione beatae, facere neque! Quo animi porro voluptate saepe deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore adipisci, officia aut quidem dolorum deserunt iure dolorem doloribus velit nobis quas consequatur at ullam odit, nesciunt est nulla nihil excepturi!</Typography>
+          <Typography variant="body1" gutterBottom color="textPrimary" align="justify">
+          <p>No projeto integrador da Generation brasil nos foi proposto o desafio desenvolver uma função (site ou e-commerce) para o "objetivo 3" dos 17 osd ( objetivos de desenvolvimento sustentável) da onu.</p>
+          <p>o desafio do ods-3 é:</p>
+          <p>"como será que podemos contribuir para garantir o acesso a saúde de qualidade e/ou promover o bem-estar para todos, em todas as idades, em sua comunidade, cidade ou país?"</p>
+          <p>escolhemos criar uma rede social com o objetivo de atender a meta 3.4 do osd-3:</p>
+          <p>até 2030, reduzir em um terço a mortalidade prematura por doenças não transmissíveis via prevenção e tratamento, promover a saúde mental e o bem-estar, a saúde do trabalhador e da trabalhadora, e prevenir o suicídio, alterando significativamente a tendência de aumento.</p></Typography>
         </TabPanel>
       </TabContext>
     </>
