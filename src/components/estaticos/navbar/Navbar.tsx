@@ -70,12 +70,7 @@ function Navbar(): JSX.Element {
                                 Cadastrar Tema
                             </Typography>
                         </Box>
-                    </Link>
-                    <Box mx={1} className='cursor' onClick={goLogout}>
-                        <Typography variant="h6" color="inherit">
-                            Logout
-                        </Typography>
-                    </Box>
+                    </Link>                   
                     <Link to="/usuarios" className="text-decorator-none">
                     <Box mx={1} className="cursor">
                         <Typography variant="h6" color="inherit">
@@ -90,6 +85,11 @@ function Navbar(): JSX.Element {
                         </Typography>
                    </Box>
                    </Link>
+                   <Box mx={1} className='cursor' onClick={goLogout}>
+                        <Typography variant="h6" color="inherit">
+                            Logout
+                        </Typography>
+                    </Box>
                 </Box>
             </Toolbar>
         </AppBar>

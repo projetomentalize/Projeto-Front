@@ -6,9 +6,9 @@ interface Postagem{
     titulo: string;
     midia_url: string;
     texto: string;
-    data:string;
+    // data:string;
     tema?: Tema| null;
-    usuario?: User| null;
+    // usuario?: User| null;
 }
 
 export default Postagem;

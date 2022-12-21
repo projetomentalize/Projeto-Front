@@ -55,7 +55,7 @@ function CadastroPost() {
         titulo: '',
         midia_url:'',
         texto: '',
-        data: '',
+        // data: '',
         tema: null,
         // usuario: null
     }) 

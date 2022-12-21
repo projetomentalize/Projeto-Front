@@ -9,7 +9,7 @@ function Home2() {
         <>
            <NavbarTeste />
            
-              {/* <Grid container direction='row' justifyContent='center' alignContent='center'  className="container-home1">
+              <Grid container direction='row' justifyContent='center' alignContent='center'  className="container-home1">
                     <Grid item text-align='center' xs={12}>
                             <Typography variant='h3' color='textPrimary' component='h3' align='center' className="titulo-aboutus">NOSSO DESAFIO ODS-3</Typography>
                     </Grid>
@@ -29,7 +29,7 @@ function Home2() {
                     </Grid>
                </Grid>
                <Divider/>
-               <Grid container direction='row' justifyContent='center' alignContent='center' className="container-home2" >
+               {/*<Grid container direction='row' justifyContent='center' alignContent='center' className="container-home2" >
                     <Grid item text-align='center' xs={12}>
                             <Typography variant='h3' color='textPrimary' component='h3' align='center' className="titulo-aboutus">INDICADOR</Typography>
                     </Grid>          
@@ -78,14 +78,14 @@ function Home2() {
                 <Divider /> */}
                 <Grid container direction='column' justifyContent='center' alignContent='center' className="container-contato">
 
-                    <Box text-align='center'>
+                    {/*<Box text-align='center'>
                         <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/1.svg' alt="" ></img>
                     </Box>
-                <Divider />
+            <Divider />
                     <Box text-align='center'>
                         <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/2.svg' alt="" ></img>
                     </Box>
-                <Divider />
+            <Divider />*/}
                     <Box text-align='center'>
                         <img src='https://raw.githubusercontent.com/projetomentalize/midia/5326276f26c5657a2547bf7655e2fa45dbb9c106/3.svg' alt="" ></img>
                     </Box>
