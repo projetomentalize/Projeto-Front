@@ -109,5 +109,19 @@ font-size: 18px!important;
     
 }
 
+.avatar {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 40%;
+}
+
+.avatar2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 45% !important;
+}
+
 
 
