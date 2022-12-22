@@ -6,18 +6,18 @@
     border-color: white !important;
     background-color: white !important;
     font-weight: 700 !important;
-    border-radius:5px !important;
+    border-radius: 5px !important;
     height: 30px !important;
     width: 80px !important;
-    font-size: 17px !important;
-    font-weight: bolder !important;
-    font-style: initial !important;
+    font-family: 'Donau Uppercase', sans-serif!important;
+    font-size: 16px !important;
+    font-weight:bolder !important;
+    font-style:normal !important;
     letter-spacing: 1px !important;
-    text-align: center !important;
-    border: ridge 0.5px white !important;
+    text-align:center !important;
+    border:ridge 0.5px  white !important;
     background: transparent !important;
     color: white !important;
-    transition: all 0.2s !important;
-    text-transform:lowercase !important;
-
+    transition:all 0.2s !important;
+    text-transform:uppercase !important;
 }
