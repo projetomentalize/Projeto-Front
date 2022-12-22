@@ -117,7 +117,29 @@ function Home2() {
                         </Box>
                     </Grid>
                 </Grid>
+            {/* <Grid container direction='row' justifyContent='center' alignContent='center'>
+                            <Grid item xs={4}>
+                        <Box>
+                            <img src="https://github.com/projetomentalize/midia/blob/avatar/cadu.png?raw=true" width="600" height="250" alt="" />
+                            <img src="https://github.com/projetomentalize/midia/blob/avatar/Gabriel.png?raw=true" alt="" />
+                            <img src="https://github.com/projetomentalize/midia/blob/avatar/tadyello.png?raw=true" alt="" />
+                        </Box>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Box>
+                                <img src="https://github.com/projetomentalize/midia/blob/avatar/brain.png?raw=true" alt="" />
+                                </Box>
+                            </Grid>
+                            <Grid item xs={4}>
+                                <Box>
+                                    <img src="https://github.com/projetomentalize/midia/blob/avatar/pekky.png?raw=true" alt="" />
+                                    <img src="https://github.com/projetomentalize/midia/blob/avatar/jessy.png?raw=true" alt="" />
+                                    <img src="https://github.com/projetomentalize/midia/blob/avatar/renan.png?raw=true" alt="" />
+                                </Box>
+                            </Grid>
+                        </Grid> */}
         </>
     );
 }
 export default Home2;
+
