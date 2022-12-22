@@ -4,8 +4,6 @@
 
 .container-home1{
 min-height: 100vh;    
-                                           
-
 }
 
 .titulo-aboutus{
@@ -13,7 +11,6 @@ font-family: 'Donau Uppercase', sans-serif!important;
 text-transform: uppercase;
 color:rgb(56, 182, 255)!important;
 margin-bottom: 5%!important;
-
 }
 
 .img-aboutus1{
@@ -21,20 +18,16 @@ margin-bottom: 5%!important;
     width: 90%;
 }
 
-
-
 .txt-home1{
 font-family: 'Donau Uppercase', sans-serif!important;
 text-transform: uppercase;
 margin-right: 15%!important;
 margin-bottom: 5%!important;
 font-size: 18px!important;
-
 }
 
 .container-home2{
-    margin-bottom: 5%!important;    
-                                               
+    margin-bottom: 5%!important;                                                
 }    
 
 .txt-indicador{
@@ -43,7 +36,6 @@ text-transform: uppercase;
 margin-right: 15%!important;
 margin-bottom: 5%!important;
 font-size: 18px!important;
-
 }
 
 .img-indicador1{
@@ -57,28 +49,18 @@ font-size: 18px!important;
     width: 70%!important;
 }
 
-
-.container-0{
-    
-}
-
 .container-contato{
-    text-align: center;
-    
-    
+    text-align: center;  
 }
 
 .container-contato1{
-    text-align: center;
-    
-    
-    
+    text-align: center; 
 }
-
 
 .titulo-contato{
     margin-top: 5%!important;
 }
+
 .box-contato{
     margin: 5%;
     text-align: center!important;
@@ -86,31 +68,23 @@ font-size: 18px!important;
     border: 2px solid rgba(0, 0, 0, .125);
     width: 30%;
     margin-bottom: 5%;
-    
-
 }
 
 .form-contato{
     margin-top:10%;
     margin-bottom:15% ;
-
-
 }
-
 
 .txt-area {
     margin-top: 5%;
     margin-bottom: 5%;
     
     width: 90%;  
-   
 }
 
 .txtdark{
     color: black;
-    margin-top: 1%px!important;
-
-    
+    margin-top: 1%px!important; 
 }
 
 
