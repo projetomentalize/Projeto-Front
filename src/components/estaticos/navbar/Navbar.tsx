@@ -11,14 +11,12 @@ import { addToken } from '../../../store/tokens/actions';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function Navbar(): JSX.Element {
-    const dispatch = useDispatch();
-
-    let navigate = useNavigate();
-
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
     );
-    
+    let navigate = useNavigate();
+    const dispatch = useDispatch();
+
     function goLogout() { 
         dispatch(addToken(''));
         toast.info('Usuário deslogado', {
@@ -37,16 +35,18 @@ function Navbar(): JSX.Element {
     var navbarComponent;
 
     if (token != "") {
-        navbarComponent = <AppBar position="static">
+        navbarComponent = <AppBar position="static" >
             <Toolbar className='fundo' variant="dense">
+                <Link to="/home2">
                     <Box className='logo' >
                         <img src="https://raw.githubusercontent.com/projetomentalize/midia/5b75364a92009a3098609fe8fa0b46298edb1dc1/logosf.svg" alt='logoMentalize' />
                     </Box>
+                </Link>
                 <Box display="flex" justifyContent="start">
                     <Link to="/home" className="text-decorator-none">
                         <Box mx={1} className='cursor'>
                             <Typography variant="h6" color="inherit">
-                                Pagina Inicial
+                                Home
                             </Typography>
                         </Box>
                     </Link>
@@ -70,22 +70,8 @@ function Navbar(): JSX.Element {
                                 Cadastrar Tema
                             </Typography>
                         </Box>
-                    </Link>                   
-                    <Link to="/usuarios" className="text-decorator-none">
-                    <Box mx={1} className="cursor">
-                        <Typography variant="h6" color="inherit">
-                          Usuários
-                        </Typography>
-                   </Box>
-                   </Link>
-                   <Link to="/perfil" className="text-decorator-none">
-                    <Box mx={1} className="cursor">
-                        <Typography variant="h6" color="inherit">
-                          Perfil
-                        </Typography>
-                   </Box>
-                   </Link>
-                   <Box mx={1} className='cursor' onClick={goLogout}>
+                    </Link>
+                    <Box mx={1} className='cursor' onClick={goLogout}>
                         <Typography variant="h6" color="inherit">
                             Logout
                         </Typography>
