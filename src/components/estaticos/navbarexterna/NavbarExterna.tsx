@@ -37,7 +37,7 @@ function NavbarExterna() {
                                 </Typography>
                             </Link>
                         </Box>
-                        <Box>
+                        <Box mx={1} className='item'>
                           <Link to="/cadastrousuario">
                           <Typography className='texto' variant="h6" color="inherit">
                             Cadastro
