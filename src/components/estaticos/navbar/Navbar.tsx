@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppBar, Toolbar, Typography } from '@material-ui/core';
+import { AppBar, Button, Toolbar, Typography } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
@@ -9,6 +9,8 @@ import { useDispatch } from "react-redux";
 import { toast } from 'react-toastify';
 import { addToken } from '../../../store/tokens/actions';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import LogoutOutlinedIcon from '@mui/icons-material/LogoutOutlined';
+
 
 function Navbar(): JSX.Element {
     const dispatch = useDispatch();
@@ -85,12 +87,14 @@ function Navbar(): JSX.Element {
                         </Typography>
                    </Box>
                    </Link>
-                   <Box mx={1} className='cursor' onClick={goLogout}>
-                        <Typography variant="h6" color="inherit">
-                            Logout
-                        </Typography>
-                    </Box>
                 </Box>
+                <Box mx={1} ml={50} className='cursor' justifyContent="flex-end" alignContent="flex-start">
+                    <Button 
+                     variant="contained"
+                     className="btnModal-logout"
+                      endIcon={<LogoutOutlinedIcon />}
+                      onClick={goLogout}> SAIR </Button>
+                      </Box>
             </Toolbar>
         </AppBar>
     }
