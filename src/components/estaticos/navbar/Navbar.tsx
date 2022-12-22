@@ -79,14 +79,7 @@ function Navbar(): JSX.Element {
                           Usuários
                         </Typography>
                    </Box>
-                   </Link>
-                   <Link to="/perfil" className="text-decorator-none">
-                    <Box mx={1} className="cursor">
-                        <Typography variant="h6" color="inherit">
-                          Perfil
-                        </Typography>
-                   </Box>
-                   </Link>
+                   </Link>                  
                 </Box>
                 <Box mx={1} ml={50} className='cursor' justifyContent="flex-end" alignContent="flex-start">
                     <Button 
