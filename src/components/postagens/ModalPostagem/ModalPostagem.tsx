@@ -19,7 +19,7 @@ function getModalStyle() {
   };
 }
 
-const useStyles = makeStyles((theme: Theme) => 
+const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     paper: {
       position: 'absolute',

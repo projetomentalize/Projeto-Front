@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './Home.css'
-import { Box, Button, Grid, Typography } from '@material-ui/core'
+import { Box, Button, Divider, Grid, Typography } from '@material-ui/core'
 import { Link, useNavigate } from 'react-router-dom';
 import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import { TokenState } from '../../store/tokens/tokensReducer';
@@ -13,7 +13,7 @@ function Home() {
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
       );
-    
+  
     useEffect(() => {
       if (token == "") {
         toast.error('Você precisa estar logado', {
@@ -34,6 +34,9 @@ function Home() {
     return (
         <>
             <Grid container direction='row' justifyContent='center' alignItems='center' className='caixa '>
+                <Grid item xs={12}>
+                    <Divider/>
+                </Grid>
                 <Grid alignItems='center' item xs={6}>
                     <Box paddingX={20} >
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='titulo mtop' >Seja bem vindo(a)!</Typography>
@@ -47,10 +50,7 @@ function Home() {
                             <Button variant="outlined" className='botao'>Ver Postagens</Button>
                         </Link>
                     </Box> 
-                </Grid>
-                <Grid item xs={4} className='caixa2'>
-                    <img src='https://cdn.discordapp.com/attachments/1023722354892869694/1048246433234563182/Sem_titulo-removebg-preview.png' alt="" width='500px' height='500px'></img>
-                </Grid>
+                </Grid>                
                 <TabPostagem/>
             </Grid>
         </>

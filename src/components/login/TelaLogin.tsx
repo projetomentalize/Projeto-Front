@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from 'react';
-import { Grid, Typography, TextField, Button, Divider } from '@material-ui/core';
+import {  Typography, TextField, Button, Divider } from '@material-ui/core';
 import { Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
 import { login } from '../../service/Service';
@@ -7,13 +7,15 @@ import UserLogin from '../../models/UserLogin';
 import './TelaLogin.css';
 import { useDispatch } from 'react-redux';
 import { toast } from 'react-toastify';
-import { addToken } from '../../store/tokens/actions';
-import Container from '@material-ui/core/Container/Container';
+import { addId, addToken } from '../../store/tokens/actions';
 
 function TelaLogin() {
     let navigate = useNavigate();
+
     const dispatch = useDispatch();
+
     const [token, setToken] = useState('');
+
     const [userLogin, setUserLogin] = useState<UserLogin>(
         {
             id: 0,
@@ -23,6 +25,7 @@ function TelaLogin() {
         }
     )
 
+   
     function updatedModel(e: ChangeEvent<HTMLInputElement>) {
 
         setUserLogin({
@@ -31,18 +34,36 @@ function TelaLogin() {
         })
     }
 
+    const [respUserLogin, setRespUserLogin] = useState<UserLogin>({
+        id: 0,
+        usuario: '',
+        senha: '',
+        token: '',
+    })
+
     useEffect(() => {
-        if (token != '') {
-            dispatch(addToken(token));
-            navigate('/home')
+        if (token != "") {
+            dispatch(addToken(token))
+            navigate('/home');
 
         }
     }, [token]);
 
+
+  
+
+    useEffect(() => {
+        if (respUserLogin.token !== "") {
+            dispatch(addToken(respUserLogin.token))
+            dispatch(addId(respUserLogin.id.toString()))
+            navigate('/home')
+        }
+    }, [respUserLogin.token])
+
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault();
         try {
-            await login(`/auth/logar`, userLogin, setToken);
+            await login(`/auth/logar`, userLogin, setRespUserLogin);
             toast.success('Usuário logado com sucesso!', {
                 position: "top-right",
                 autoClose: 2000,

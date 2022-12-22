@@ -8,17 +8,24 @@ import { busca, buscaId, post, put } from '../../../service/Service';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import User from '../../../models/User';
 
 function CadastroPost() {
+
     let navigate = useNavigate();
+
     const { id } = useParams<{ id: string }>();
-    const [temas, setTemas] = useState<Tema[]>([])
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+
+    const token = useSelector<TokenState, TokenState['tokens']>(
         (state) => state.tokens
-      );
+      )
+
+    // const userId = useSelector<TokenState, TokenState['id']>(
+	// 	(state) => state.id
+	// )
 
     useEffect(() => {
-        if (token == "") {
+        if (token == '') {
             toast.error('Você precisa estar logado', {
                 position: "top-right",
                 autoClose: 2000,
@@ -29,10 +36,12 @@ function CadastroPost() {
                 theme: "colored",
                 progress: undefined,
             });
-            navigate("/login")
+            navigate('/login')
 
         }
-    }, [token])
+    }, [token])  
+    
+    const [temas, setTemas] = useState<Tema[]>([])
 
     const [tema, setTema] = useState<Tema>(
         {
@@ -40,31 +49,37 @@ function CadastroPost() {
             nome: '',
             abordagem:''
         })
+
     const [postagem, setPostagem] = useState<Postagem>({
         id: 0,
-        // data: '',
         titulo: '',
         midia_url:'',
         texto: '',
-        tema: null
-        // usuario: undefined
-    })
-    
+        // data: '',
+        tema: null,
+        // usuario: null
+    }) 
 
-    useEffect(() => { 
+    // const [usuario,setUsuario] = useState<User>({
+    //     id: +userId,
+    //     nome:'',
+    //     usuario: '',
+    //     senha: '',
+    //     foto_url: '',
+    //     tipo_usuario:''
+    //   })
+
+    function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
+
         setPostagem({
             ...postagem,
+            [e.target.name]: e.target.value,
             tema: tema
+            
         })
-    }, [tema])
 
-    useEffect(() => {
-        getTemas()
-        if (id !== undefined) {
-            findByIdPostagem(id)
-        }
-    }, [id])
-
+    }
+    
     async function getTemas() {
         await busca("/temas", setTemas, {
             headers: {
@@ -73,23 +88,29 @@ function CadastroPost() {
         })
     }
 
+    useEffect(() => { 
+        setPostagem({
+            ...postagem,
+            tema: tema,
+            // usuario: usuario
+        })
+        console.log(postagem)
+    }, [tema])
+
     async function findByIdPostagem(id: string) {
         await buscaId(`postagens/${id}`, setPostagem, {
             headers: {
                 'Authorization': token
             }
         })
-    }
+    } 
 
-    function updatedPostagem(e: ChangeEvent<HTMLInputElement>) {
-
-        setPostagem({
-            ...postagem,
-            [e.target.name]: e.target.value,
-            tema: tema
-        })
-
-    }
+    useEffect(() => {
+        getTemas()
+        if (id !== undefined) {
+            findByIdPostagem(id)
+        }
+    }, [id])
 
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
@@ -138,7 +159,6 @@ function CadastroPost() {
         back()
 
     }
-
 
     function back() {
         navigate('/postagens')

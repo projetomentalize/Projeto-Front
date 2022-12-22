@@ -6,12 +6,10 @@
 
 * {
     text-decoration: none;
-    font-family: 'Donau Uppercase', sans-serif!important;
-    text-transform: uppercase;
 }
 
 .fundo {
-    height: 80px;
+    height: 50px;
     /* background-color: #38b6ff; */
     /* background: rgb(56,182,255);
     background: linear-gradient(180deg, rgba(56,182,255,1) 0%, rgba(0,135,193,1) 0%, rgba(0,212,255,1) 100%); */
@@ -21,7 +19,7 @@
 }
 
 .logo img {
-    height: 80px;
+    height: 60px;
 }
 
 .texto {

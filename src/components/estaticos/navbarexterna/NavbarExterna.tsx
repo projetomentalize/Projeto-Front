@@ -3,9 +3,9 @@ import { Box } from '@mui/material';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import ModalLogin from '../../login/modalLogin/ModalLogin';
-import './NavbarTeste.css'
+import './NavbarExterna.css'
 
-function NavbarTeste() {
+function NavbarExterna() {
     return (
         <>
             <AppBar position="fixed" className='navbar'>
@@ -46,4 +46,4 @@ function NavbarTeste() {
     );
 }
 
-export default NavbarTeste;
+export default NavbarExterna;

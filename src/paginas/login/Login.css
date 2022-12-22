@@ -5,17 +5,16 @@
 
 .grid1 {
     min-height: 100vh;
-    background: #f1f4f9 ;
+    background: white ;
     background-position: bottom right;
     background-repeat: no-repeat;
     background-image: url(https://resumedone.co/static/img/login/Without-BG.svg);
     z-index: 2;
-    /* background-size: cover; */
+    background-size: cover;
 
     
 
 }
-
 
 .texto1 {
     font-weight: bold !important;
@@ -93,42 +92,3 @@
 
 }
 
-/* .bttlogin{
-    text-align: center!important; 
-    border: 0!important;
-    font-weight: 700!important;
-    border-radius: 27px!important;
-    height: 55px!important;
-    width: 100%!important;
-    z-index: 30!important;
-    margin: 45px auto 30px!important;
-    font-family: Gilroy Regular!important;
-    font-size: 13px!important;
-    font-weight: bold!important;
-    font-style: normal!important;
-    font-stretch: normal!important;
-    line-height: 1.77!important;
-    -webkit-letter-spacing: 0.78px!important;
-    -moz-letter-spacing: 0.78px!important;
-    -ms-letter-spacing: 0.78px!important;
-    letter-spacing: 0.78px!important;
-    text-align: center!important;
-    border: 1px solid #0087c1!important;
-    background: #0087c1!important;
-    color: white!important;
-    -webkit-transition: all 0.2s!important;
-    transition: all 0.2s!important;
-    padding: 0!important;
-    text-transform: uppercase!important;
-    
- } */
-
-
- /* .imagem {
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
-    background-repeat: no-repeat;
-    width: 100vh;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-} */

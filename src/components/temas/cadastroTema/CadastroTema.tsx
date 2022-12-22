@@ -1,5 +1,5 @@
 import React, {useState, useEffect, ChangeEvent} from 'react'
-import { Container, Typography, TextField, Button } from "@material-ui/core"
+import { Container, Typography, TextField, Button, MenuItem } from "@material-ui/core"
 import {useNavigate, useParams } from 'react-router-dom'
 import './CadastroTema.css';
 import Tema from '../../../models/Tema';
@@ -9,15 +9,19 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from 'react-toastify';
 
 function CadastroTema() {
+    
     let navigate = useNavigate();
+
     const { id } = useParams<{id: string}>();
+
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
       );
+
     const [tema, setTema] = useState<Tema>({
         id: 0,
         nome:'',
-        abordagem:'',
+        abordagem:''
     })
 
     useEffect(() => {
@@ -108,6 +112,10 @@ function CadastroTema() {
             <form onSubmit={onSubmit}>
                 <Typography variant="h3" color="textSecondary" component="h1" align="center" >Formulário de cadastro tema</Typography>
                 <TextField value={tema.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} id="nome" label="Nome" variant="outlined" name="nome" margin="normal" fullWidth />
+                <TextField id="select" value={tema.abordagem} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedTema(e)} label='Abordagem' variant='outlined' name='abordagem' margin='normal' fullWidth select>
+                            <MenuItem value="Teste 1">Teste 1</MenuItem>
+                            <MenuItem value="Teste 2">Teste 2</MenuItem>
+                        </TextField> 
                 <Button type="submit" variant="contained" color="primary">
                     Finalizar
                 </Button>

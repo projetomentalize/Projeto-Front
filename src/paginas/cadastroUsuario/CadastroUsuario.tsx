@@ -7,7 +7,7 @@ import { Box } from '@mui/material';
 import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
 import { toast } from 'react-toastify';
-import NavbarTeste from '../../components/estaticos/navbarteste/NavbarTeste';
+import NavbarExterna from '../../components/estaticos/navbarexterna/NavbarExterna';
 
 function CadastroUsuario() {
 
@@ -82,7 +82,7 @@ function CadastroUsuario() {
     }
     return (
         <>
-        <NavbarTeste/>
+        <NavbarExterna/>
         <Grid container direction='row' justifyContent='center' alignItems='center' className='container-cadastro'>
             <Grid item xs={6} className='imagem-cadastro'></Grid>
             <Grid item xs={6} alignItems='center'>
