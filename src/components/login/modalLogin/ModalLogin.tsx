@@ -8,7 +8,6 @@ import './ModalLogin.css';
 import TelaLogin from '../TelaLogin';
 import LoginOutlinedIcon from '@mui/icons-material/LoginOutlined';
 
-
 function getModalStyle() {
   const top = 50 ;
   const left = 50;
@@ -62,12 +61,12 @@ function ModalLogin () {
   return (
     <div>
       <Button
-         variant="contained"
+        variant="outlined"
         className="btnModal-login"
+        endIcon={<LoginOutlinedIcon />}
         onClick={handleOpen}>Login </Button>
       <Modal
         open={open}
-        endIcon={<LoginOutlinedIcon />}
         onClose={handleClose}
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
