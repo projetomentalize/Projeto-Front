@@ -13,8 +13,8 @@
 
 .botao{
     border-color: white !important;
-    background-color: #003a75 ;
-    color: white !important;
+    background-color: #ffffff !important;
+    color: rgb(0, 0, 0) !important;
 }
 
 .postagens{
@@ -24,4 +24,16 @@
 
 .caixa2{
     background-color: rgba(90, 190, 193, 0.906) !important;
+}
+
+.teste4{
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.VerCor{
+    border-color: #2a52be !important;
 }

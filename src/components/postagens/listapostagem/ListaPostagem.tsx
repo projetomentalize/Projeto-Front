@@ -12,7 +12,6 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaPostagem() {
 
-
   const [posts, setPosts] = useState<Postagem[]>([])
 
   let navigate = useNavigate();
@@ -21,7 +20,6 @@ function ListaPostagem() {
     (state) => state.tokens
   );
  
-
   useEffect(() => {
     if (token == "") {
       toast.error('Você precisa estar logado', {
@@ -57,8 +55,8 @@ function ListaPostagem() {
     <>
       {
         posts.map(post => (
-          <Box m={2} marginTop={10} >
-            <Card variant="outlined">
+          <Box m={2} marginTop={10} className='caixaCor'>
+            <Card variant="outlined" >
               <CardContent>
                 <Typography color="textSecondary" gutterBottom>
                   Postagens
@@ -87,14 +85,14 @@ function ListaPostagem() {
 
                   <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      <Button variant="contained" className="AtualizarCor" size='small' color="primary" >
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button variant="contained" size='small' color="secondary" className='DeletarCor'>
                         deletar
                       </Button>
                     </Box>

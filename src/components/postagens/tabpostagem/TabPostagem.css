@@ -2,8 +2,6 @@
     font-weight: bold;
  }
  .tab-bar{
-    background: black!important;
-    height: 1px;
-
-
+    background: rgb(18, 148, 199)!important;
+    height: 50px;
  }

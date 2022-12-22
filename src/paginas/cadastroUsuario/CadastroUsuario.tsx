@@ -95,9 +95,10 @@ function CadastroUsuario() {
                         <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)} id='confirmarSenha' label='Confirme sua senha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
                         <TextField value={user.foto_url} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='foto_url' label='Foto'  placeholder='htttp://linkdafoto.jpg' variant='outlined' name='foto_url' margin='normal' fullWidth />
                         {/* <TextField value={user.tipo_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='tipo_usuario' label='Profissão' variant='outlined' name='tipo_usuario' margin='normal' fullWidth /> */}
-                        <TextField id="select" value={user.tipo_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} label='Profissão' variant='outlined' name='tipo_usuario' margin='normal' fullWidth select>
+                        <TextField id="select" value={user.tipo_usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} label='Atuação' variant='outlined' name='tipo_usuario' margin='normal' fullWidth select>
                             <MenuItem value="Estudante">Estudante</MenuItem>
                             <MenuItem value="Piscólogo">Piscólogo</MenuItem>
+                            <MenuItem value="Usuário">Usuário</MenuItem>
                         </TextField>                        
                         <Box marginTop={2} textAlign='center'>
                             <Link to='/login' className='text-decorator-none'>

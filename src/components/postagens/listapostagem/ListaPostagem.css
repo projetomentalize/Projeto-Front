@@ -5,5 +5,18 @@ h1,h2,h3,h4,h5,h6{
     text-decoration: none;
     font-family: 'Donau Uppercase', sans-serif!important;
     text-transform:uppercase; 
+}
+
+.caixaCor{
+    background: linear-gradient(0deg, rgba(36,34,195,1) 14%, rgba(180,102,191,1) 52%, rgba(45,245,253,1) 100%);
+    padding: 0.30%;
+}
+
+.AtualizarCor{
+    background: linear-gradient(90deg, rgba(21,157,36,1) 0%, rgba(26,67,244,1) 0%);
+}
+
+.DeletarCor{
+    background: linear-gradient(90deg, rgba(21,157,36,1) 0%, rgba(215,31,31,1) 0%);
 
 }

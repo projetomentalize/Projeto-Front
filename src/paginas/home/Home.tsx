@@ -6,7 +6,8 @@ import TabPostagem from '../../components/postagens/tabpostagem/TabPostagem';
 import { TokenState } from '../../store/tokens/tokensReducer';
 import { useSelector } from 'react-redux';
 import { toast } from 'react-toastify';
-import ModalPostagem from '../../components/postagens/modalPostagem/ModalPostagem';
+import ModalPostagem from '../../components/postagens/ModalPostagem/ModalPostagem';
+
 
 function Home() {
     let navigate = useNavigate();
@@ -42,12 +43,12 @@ function Home() {
                         <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='titulo mtop' >Seja bem vindo(a)!</Typography>
                         <Typography variant='h5' gutterBottom color='textPrimary' component='h5' align='center' className='titulo' >Aproveite para explorar o site!</Typography>
                         </Box>
-                    <Box display="flex" justifyContent="center">
+                    <Box className='teste4'>
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
                         <Link to="/postagens" className="text-decorator-none">
-                            <Button variant="outlined" className='botao'>Ver Postagens</Button>
+                            <Button variant="outlined" className='botao VerCor'>Ver Postagens</Button>
                         </Link>
                     </Box> 
                 </Grid>                
