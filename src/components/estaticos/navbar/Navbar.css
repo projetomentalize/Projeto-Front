@@ -1,8 +1,12 @@
 .cursor{
     color: white;
     cursor: pointer;
-}* {
+  
+/* }* {
     text-decoration: none;
+    font-family: 'Donau Uppercase', sans-serif!important;
+    text-transform:uppercase; */
+    
 }
 
 .fundo{
@@ -26,5 +30,4 @@
 .item{
     color: white !important;
 }
-
 

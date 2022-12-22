@@ -11,11 +11,16 @@ import { toast } from 'react-toastify';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ListaPostagem() {
+
+
   const [posts, setPosts] = useState<Postagem[]>([])
+
   let navigate = useNavigate();
-    const token = useSelector<TokenState, TokenState["tokens"]>(
+
+  const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
   );
+ 
 
   useEffect(() => {
     if (token == "") {
@@ -61,18 +66,21 @@ function ListaPostagem() {
                 <Typography variant="h5" component="h2">
                   {post.titulo}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography variant="body2" component="p" className='txt-post'>
                   {post.texto}
                 </Typography>
                 <Typography variant="body2" component="p">
                   {post.tema?.nome}
                 </Typography>
-                {/* <Typography variant="body2" component="p"> 
-                  {post.usuario?.nome} // Exibe o nome do usuario da postagem.
-                </Typography>                 */}
                 {/* <Typography variant="body1" component="p">
 									Postado em: {new Date(Date.parse(post.data)).toLocaleDateString()} <br />
 								</Typography> */}
+                {/* <Typography variant="body2" component="p"> 
+                  {post.usuario?.nome} // Exibe o nome do usuario da postagem.
+                </Typography>
+                <Typography variant="body2" component="p">
+                  {post.data}  // Exibe a data da postagem.
+                </Typography> */}
               </CardContent>
               <CardActions>
                 <Box display="flex" justifyContent="center" mb={1.5}>

@@ -8,7 +8,7 @@ interface Postagem{
     texto: string;
     // data:string;
     tema?: Tema| null;
-    // usuario?:User|number;
+    // usuario?: User| null;
 }
 
 export default Postagem;

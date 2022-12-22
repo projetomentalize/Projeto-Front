@@ -19,6 +19,8 @@ import store from './store/store';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home2 from './paginas/home2/Home2';
+import Perfil from './components/perfil/Perfil';
+import ListaUsuario from './paginas/usuarios/ListaUsuario';
 
 function App() {
   return (
@@ -28,11 +30,11 @@ function App() {
         <Navbar />
         <div style={{ minHeight: '100vh' }}>
           <Routes>
-            <Route path="/" element={<Home2 />}/>
+            <Route path="/home2" element={<Home2 />}/>
 
-            <Route path="/home2" element={<Home2 />} />
+            <Route path="/" element={<Home2 />} />
 
-            <Route path="/login" element={<Login />} />
+             <Route path="/login" element={<Login />} />
 
             <Route path="/home" element={<Home />} />
 
@@ -57,9 +59,14 @@ function App() {
             <Route path="contato" element={<Contato />} />
             
             <Route path="sobrenos" element={<SobreNos />} />
-
-
             
+            <Route path="/perfilUsuario/" element={<Perfil />} />
+
+            <Route path="/perfil" element={<Perfil />} />
+
+            <Route path="/usuarios" element={<ListaUsuario />} />
+
+
 
           </Routes>
         </div>
